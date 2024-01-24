@@ -8,7 +8,7 @@ Notes with commit tips, branching strategies, command shortcuts and more.
 ## Table of contents
 
 - [Good Git commit tips](#keyboard-keys-cheatsheet)
-- [Github-flow](#github-flow)
+- [Github Flow](#github-flow)
 - [Git command shortcuts](#git-command-shortcuts)
 
 
@@ -139,7 +139,70 @@ style: format code with new prettier config <br />
 
 <br />
 
-## Github-flow
+## Github Flow
+Github Flow is a branching strategy used by Github. It is the easiest and best suggested for small projects with quick release.
 
+<br />
+
+### Github Flow Process
+
+1. Create Branch
+2. Edit Branch
+3. Create a Pull Request
+4. Merge Pull Request
+5. Delete Branch
+
+<br />
+
+Great Github flow explanation with visual illustration can be found [here](https://www.alexhyett.com/git-flow-github-flow/) as well as in [Github Flow official documentation](https://docs.github.com/en/get-started/using-github/github-flow) on Github.
+
+<br />
+
+### Delete branching issue after merge
+Github has an option to delete a branch after merging of pull request. After a pull request has been merged, you'll see a button to delete the branch. This action will delete the branch **only in remote.**
+
+<br />
+In order to delete the branch locally we have to perform number of commands below:
+
+<br />
+
+Let's say, our branch to delete is ```demo3_feature```
+
+<br />
+
+1. **List branches in local machine**
+
+   The command ```git branch -a``` shows the test branch ```demo3_feature``` is present on local and also present on remote.
+
+    ![List Branch](README_images/listBranch.png) 
+
+   <br />
+
+2. **Prune/Cleanup the local references to remote branch**
+
+   The command ```git remote prune origin --dry-run``` lists branches that can be deleted/pruned on your local. An option ```--dry-run``` is needed.
+
+    ![Check Prune](README_images/checkPrune.png) 
+
+   <br />
+
+    Now go ahead and actually prune/cleanup the local references by running the command ```git remote prune origin```. Note that you don't need an option ```--dry-run```.
+
+    ![Prune](README_images/prune.png) 
+
+    <br />
+
+    Again, run the command ```git branch -a``` will show the local status of branches and there you can notice that ```remotes/origin/demo3_feature``` has been removed, but not the local branch ```demo3_feature```.
+
+    <br />
+
+3. **Delete local branch**
+
+    In order to delete local branch ```demo3_feature```, we have to perform command ```git branch -d demo3_feature```
+
+    ![Delete Branch](README_images/deleteBranch.png) 
+
+<br />
+    
 ## Git command shortcuts
 
