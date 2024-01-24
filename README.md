@@ -8,7 +8,8 @@ Notes with commit tips, branching strategies, command shortcuts and more.
 ## Table of contents
 
 - [Good Git commit tips](#keyboard-keys-cheatsheet)
-- [Navigation - Workspace](#navigation---workspace)
+- [Github-flow](#github-flow)
+- [Git command shortcuts](#git-command-shortcuts)
 
 
 <br />
@@ -136,6 +137,9 @@ style: format code with new prettier config <br />
 
 *More examples in [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) official documentation.*
 
+<br />
 
+## Github-flow
 
+## Git command shortcuts
 
