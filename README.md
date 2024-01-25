@@ -9,6 +9,7 @@ Notes with commit tips, branching strategies, command shortcuts and more.
 
 - [Good Git commit tips](#keyboard-keys-cheatsheet)
 - [Github Flow](#github-flow)
+- [Naming conventions for branches](#naming-conventions-for-branches)
 - [Git command shortcuts](#git-command-shortcuts)
 
 
@@ -194,6 +195,47 @@ Let's say, our branch to delete is ```demo3_feature```
     <img src = "README_images/deleteBranch.png" width="450" height="50"/> 
 
 <br />
-    
+
+## Naming conventions for branches
+A crucial aspect of using Git effectively is the proper usage and naming of branches. A branch in Git is essentially a unique set of code changes with a unique name. It is important for maintaining clean and understandable codebase.
+
+<br />
+
+### Basic Rules
+
+<br />
+
+| Rule | Definition |
+| --- | --- |
+| lowercase and hyphen-separated | lowercase for branch names and hyphens to separate words (```feature/new-login``` or ```bugfix/header-styling```) |
+| alphanumeric characters |  use only alphanumeric characters (a-z, 0–9) and hyphens. Avoid punctuation, spaces, underscores, or any non-alphanumeric character |
+| no continuous hyphens | do not use continuous hyphens. ```feature--new-login``` can be confusing and hard to read |
+| No trailing hyphens | do not end your branch name with a hyphen (```feature-new-login-``` is not a good practice) |
+| descriptive | the name should be descriptive and concise, ideally reflecting the work done on the branch |
+
+<br />
+
+### Branch Prefix
+Prefix in branch names help to quickly identify the purpose of the branch. Below are common types of branches used with their prefixes:
+
+<br />
+
+| Type | Prefix | Definition | Example |
+| --- | --- | --- | --- |
+| feature branch | ```feature/``` | develop new features | ```feature/login-system```
+| bugfix branch | ```bugfix/``` | fix bugs in code | ```bugfix/header-styling```
+| hotfix branch | ```hotfix/``` | made directly from the production branch to fix critical bugs in the production environment | ```hotfix/critical-security-issue```
+| release branch | ```release/``` | prepare for a new production release | ```release/v1.0.1```
+| documenation branch | ```docs/``` | write, update, or fix documentation | ```docs/api-endpoints```
+
+<br />
+
+### Few examples of good branch names
+- ```feature/T-456-user-authentication```
+- ```bugfix/T-789-fix-header-styling```
+- ```hotfix/T-321-security-patch```
+- ```release/v2.0.1```
+- ```docs/T-654-update-readme```
+
 ## Git command shortcuts
 
