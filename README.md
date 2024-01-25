@@ -153,20 +153,22 @@ Great Github flow explanation with visual illustration can be found [here](https
 ### Delete branching issue after merge
 Github has an option to delete a branch after merging of pull request. After a pull request has been merged, you'll see a button to delete the branch. This action will delete the branch **only in remote.**
 
+<img src = "README_images/button-delete-branch.png" width="500" height="80"/>
+
 <br />
 In order to delete the branch locally we have to perform number of commands below:
 
 <br />
 
-Let's say, our branch to delete is ```demo3_feature```
+Let's say, our branch to delete is ```feature/demo```
 
 <br />
 
 1. **List branches in local machine**
 
-   The command ```git branch -a``` shows the test branch ```demo3_feature``` is present on local and also present on remote.
+   The command ```git branch -a``` shows the test branch ```feature/demo``` is present on local and also present on remote.
 
-    <img src = "README_images/listBranch.png" width="400" height="100"/>
+    <img src = "README_images/list-branch.png" width="400" height="100"/>
 
    <br />
 
@@ -174,7 +176,7 @@ Let's say, our branch to delete is ```demo3_feature```
 
    The command ```git remote prune origin --dry-run``` lists branches that can be deleted/pruned on your local. An option ```--dry-run``` is needed.
 
-    <img src = "README_images/checkPrune.png" width="450" height="60"/>
+    <img src = "README_images/check-prune.png" width="450" height="60"/>
 
    <br />
 
@@ -184,15 +186,17 @@ Let's say, our branch to delete is ```demo3_feature```
 
     <br />
 
-    Again, run the command ```git branch -a``` will show the local status of branches and there you can notice that ```remotes/origin/demo3_feature``` has been removed, but not the local branch ```demo3_feature```.
+    Again, run the command ```git branch -a``` will show the local status of branches and there you can notice that ```remotes/origin/feature/demo``` has been removed, but not the local branch ```feature/demo```.
+    
+     <img src = "README_images/removed-remote.png" width="400" height="60"/>
 
     <br />
 
 3. **Delete local branch**
 
-    In order to delete local branch ```demo3_feature```, we have to perform command ```git branch -d demo3_feature```
+    In order to delete local branch ```feature/demo```, we have to perform command ```git branch -d feature/demo```
 
-    <img src = "README_images/deleteBranch.png" width="450" height="50"/> 
+    <img src = "README_images/delete-branch.png" width="400" height="35"/> 
 
 <br />
 
