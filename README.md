@@ -15,17 +15,16 @@ Notes with commit tips, branching strategies, command shortcuts and more.
 <br />
 
 ## Good Git commit tips
-Mostly based on [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+Mostly based on [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 <br />
 
-**Conventional Commits** define a standard format in commit messages.They let you easily scan valuable context about your
-changes.
+**Conventional Commits** define a standard format in commit messages.It lets you easily scan valuable context about your changes.
 
-Write the commit message as if it’s about to be applied, rather than about what you just did.
+Commit message should be interpreted as if it’s about to be applied, rather than about what have just been done.
 
 Your commit message should be concise and state the context of the change.
 
-Ensure that it is short and use an imperative mood
+Ensure that it is short and use an imperative mood.
 
 <br />
 
@@ -46,29 +45,19 @@ The ```<type>``` field provides the context for the commit. It communicates the 
 
 <br />
 
-```<Types>``` **defined below:**
-
-**feat:** a new feature
-
-**fix:** a bug fix
-
-**style:** changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-
-**refactor:** a code change that neither fixes nor adds a feature
-
-**test:** adding missing tests or correcting existing tests
-
-**docs:** documentation only changes
-
-**chore:** other changes that don't modify src or test files
-
-**build:** changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
-
-**ci:** changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)Deprecate:
-
-**perf:** a code change that improves performance
-
-**revert:** reverts a previous commit
+| ```<Types>``` | Definition |
+| --- | --- |
+| feat | a new feature |
+| fix | a bug fix |
+| style | changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc) |
+| refactor | a code change that neither fixes nor adds a feature |
+| test | adding missing tests or correcting existing tests |
+| docs | documentation only changes |
+| chore | other changes that don't modify src or test files |
+| build | changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm) |
+| ci | changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)Deprecate: |
+| perf | a code change that improves performance |
+| revert | reverts a previous commit |
 
 <br />
 
@@ -120,20 +109,22 @@ The first word in your commit ```<description>``` should be for example:
 <br />
 
 ### Few examples of good git commits
-docs: add short circuit to hook example <br />
-docs: fix typo in code inside README.md <br />
-fix(deps): update dependency cz-conventional-changelog to v3 <br />
-fix(deps): update dependency lodash to v4.17.15 <br />
-chore: update mocha, other dev deps <br />
-fix(node): remove node 6 and 8 support <br />
-chore(deps): update dependency semantic-release to v15.13.18 <br />
-fix: update dependencies for security <br />
-fix(deps): update dependency lodash to v4.17.14 <br />
-docs: highlight pre-requisties and bubble up related sections <br />
-fix(cli): allow argv to be overridden in bootstrap <br />
-feat(cli): implement --hook option for git hooks integration <br />
-test(ED-439): add tests for Modal component <br />
-style: format code with new prettier config <br />
+- docs: add short circuit to hook example
+- docs: fix typo in code inside README.md 
+- fix(deps): update dependency cz-conventional-changelog to v3
+- fix(deps): update dependency lodash to v4.17.15 
+- chore: update mocha, other dev deps 
+- fix(node): remove node 6 and 8 support 
+- chore(deps): update dependency semantic-release to v15.13.18 
+- fix: update dependencies for security 
+- fix(deps): update dependency lodash to v4.17.14 
+- docs: highlight pre-requisties and bubble up related sections 
+- fix(cli): allow argv to be overridden in bootstrap 
+- feat(cli): implement --hook option for git hooks integration 
+- test(ED-439): add tests for Modal component
+- style: format code with new prettier config
+
+<br />
 
 *More examples in [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) official documentation.*
 
@@ -174,7 +165,7 @@ Let's say, our branch to delete is ```demo3_feature```
 
    The command ```git branch -a``` shows the test branch ```demo3_feature``` is present on local and also present on remote.
 
-    ![List Branch](README_images/listBranch.png) 
+    <img src = "README_images/listBranch.png" width="400" height="100"/>
 
    <br />
 
@@ -182,13 +173,13 @@ Let's say, our branch to delete is ```demo3_feature```
 
    The command ```git remote prune origin --dry-run``` lists branches that can be deleted/pruned on your local. An option ```--dry-run``` is needed.
 
-    ![Check Prune](README_images/checkPrune.png) 
+    <img src = "README_images/checkPrune.png" width="450" height="60"/>
 
    <br />
 
     Now go ahead and actually prune/cleanup the local references by running the command ```git remote prune origin```. Note that you don't need an option ```--dry-run```.
 
-    ![Prune](README_images/prune.png) 
+    <img src = "README_images/prune.png" width="450" height="60"/>
 
     <br />
 
@@ -200,7 +191,7 @@ Let's say, our branch to delete is ```demo3_feature```
 
     In order to delete local branch ```demo3_feature```, we have to perform command ```git branch -d demo3_feature```
 
-    ![Delete Branch](README_images/deleteBranch.png) 
+    <img src = "README_images/deleteBranch.png" width="450" height="50"/> 
 
 <br />
     
