@@ -193,6 +193,8 @@ Let's say, our branch to delete is ```feature/demo```
     <br />
 
 3. **Delete local branch**
+    
+    > Make sure to switch to some other branch than the one to be deleted.
 
     In order to delete local branch ```feature/demo```, we have to perform command ```git branch -d feature/demo```
 
